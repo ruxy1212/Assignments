@@ -1,0 +1,232 @@
+/* General CSS */
+
+html, body {
+  height: 100%;
+  width: 100%;
+	background-color:  hsl(0, 0%, 95%);
+	margin: 0;
+}
+
+/* ===================================== */
+/* Flex Layout CSS */
+.tview {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+
+.halign {
+	margin: 0;
+	padding: 0;
+}
+
+.flex {
+	display: flex;
+	max-width: 900px; 
+	padding: 40px 5% 0;
+	justify-content: center;
+}
+
+.flex-child {
+	position: relative;
+	padding: 40px;
+	box-sizing: border-box;
+}
+
+.flex-child:nth-child(1){
+	border-radius:  10px 0 0 10px;
+	background-color: hsl(31, 77%, 52%);
+}
+
+.flex-child:nth-child(2){
+	background-color: hsl(184, 100%, 22%);
+}
+
+.flex-child:nth-child(3){
+	border-radius: 0 10px 10px 0;
+	background-color: hsl(179, 100%, 13%);
+}
+
+h1 {
+	font-weight: 700;
+	margin: 30px 0;
+	color: hsl(0, 0%, 95%);
+	font-family:'Big Shoulders Display', Tahoma, Geneva, Verdana, sans-serif;
+	letter-spacing: 0.04em;
+	font-size: 40px;
+}
+
+p {
+	font-size: 15px;
+	margin-bottom: 120px;
+	line-height: 1.8;
+	color: hsla(0, 0%, 100%, 0.75);
+	font-weight: 400;
+	font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+}
+
+button {
+	font-size: 15px;
+	position: absolute;
+	bottom: 30px;
+	font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	padding: 10px 20px;
+	border-radius: 30px;
+	border: 2px solid hsl(0, 0%, 95%);
+	background-color: hsl(0, 0%, 95%);
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.flex-child:nth-child(1) button{
+	color: hsl(31, 77%, 52%);
+}
+
+.flex-child:nth-child(2) button {
+	color: hsl(184, 100%, 22%);
+}
+
+.flex-child:nth-child(3) button {
+	color: hsl(179, 100%, 13%);
+}
+
+.mplink {
+	max-width: 900px; 
+	padding: 40px 5% 0;
+}
+
+.link button {
+	background-color: hsl(184, 100%, 22%);
+	border: 2px solid hsl(184, 100%, 22%);
+	color: hsl(0, 0%, 95%);
+	position: relative;
+	bottom: unset;
+}
+
+.flex-child:nth-child(1) button:hover {
+	background-color: hsl(31, 77%, 52%);
+	color:  hsl(0, 0%, 95%);
+}
+
+.flex-child:nth-child(2) button:hover {
+	background-color: hsl(184, 100%, 22%);
+	color:  hsl(0, 0%, 95%);
+}
+
+.flex-child:nth-child(3) button:hover {
+	background-color: hsl(179, 100%, 13%);
+	color:  hsl(0, 0%, 95%);
+}
+
+.link button:hover {
+	color: hsl(184, 100%, 22%);
+	background-color:  hsl(0, 0%, 95%);
+}
+
+.link {
+	float: right;
+	margin: 30px 0;
+}
+
+@media only screen and (max-width: 600px){
+	.flex {
+		flex-direction: column;
+		margin: 20px auto;
+		width: 375px;
+		max-width: 90%;
+	}
+
+	.mplink {
+		margin: 20px auto;
+		padding-top: 0;
+	}
+	
+	.flex-child:nth-child(1){
+		border-radius:  10px 10px 0 0;
+	}
+	.flex-child:nth-child(3){
+		border-radius: 0 0 10px 10px;
+	}
+}
+
+@media only screen and (max-width: 420px){ 
+/* 	for width smaller than 375px */
+	.flex {
+		width: 90%;
+	}
+}
+
+/* ===================================================== */
+/* Grid Layout CSS */
+
+.item1 { grid-area: a; background-color:yellow; }
+.item2 { grid-area: b; background-color:dodgerblue;}
+.item3 { grid-area: c; background-color:lightgreen;}
+.item4 { grid-area: d; background-color:bisque; }
+.item5 { grid-area: e; background-color:tomato; }
+
+.btn-container {
+	padding: 40px 5% 0;
+	width: 80%;
+  max-width: 700px;
+}
+
+.galign {
+	display: grid;
+	height: 100%;
+	align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'a a b'
+    'c d d'
+		'c e e';
+  grid-gap: 10px;
+  background-color: #2f1e3d;
+	padding: 40px 5% 0;
+	width: 80%;
+  max-width: 700px;
+	grid-template-columns: 47.5% 17.5% 35%;
+	grid-template-rows: 47.5% 24% 28.5%;
+}
+
+.aspect-ratio {
+	aspect-ratio: 1/0.7;
+}
+
+@supports not (aspect-ratio: 1/0.7){
+	/* 	CSS workaround for browsers like some Safari not supporting aspect-ratio */
+	.aspect-ratio::before{
+		content: "";
+		padding-top: 70%;
+	}
+	
+	.aspect-ratio::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.grid-container > div {
+  display: grid;
+	justify-items: center;
+	align-items: center;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px){
+
+	.grid-container {
+		padding: 0;
+		margin:0 auto;
+		grid-gap: 8px;
+	}
+	.btn-container {
+		padding: 0;
+		margin: 30px auto 0;
+	}
+}
