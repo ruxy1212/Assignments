@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Week 3 Task | Registration</title>
+  <link href="style.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    <div>
+    <h1>REGISTRATION FORM</h1>
+    <form method="POST" action="successs.html">
+        <span>
+            <label>First Name:&emsp;</label>
+            <input name="fname" placeholder="Russ" type="text" required>
+        </span>
+        <br>
+			<span>
+            <label>Last Name:&emsp;</label>
+            <input placeholder="Oje" name="lname" type="text" required>
+        </span>
+        <br>
+      <span>
+            <label>Phone Number:&emsp;</label>
+            <input name="phone" placeholder="+2348090090022" type="tel" required>
+        </span>
+        <br>
+          <span>
+            <label>Email:&emsp;</label>
+            <input name="email" placeholder="russell@oje.com" type="email" required>
+        </span>
+        <br>
+			<span>
+            <label>Gender:&emsp;</label>
+            <select name="gender" required>
+                <option value="" disabled selected>Select One</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="None">Others</option>
+            </select>
+        </span>
+        <br>
+        <span>
+            <label>Date of Birth:&emsp;</label>
+            <input name="dob" type="date" required>
+        </span>
+        <br>
+          <span>
+            <label>Favorite Color:&emsp;</label>
+            <input name="color" type="color" required>
+        </span>
+			<br>
+        <span>
+            <label>Password:&emsp;</label>
+            <input name="password" id="password1" placeholder="Your password" type="password" required>
+        </span>
+			<br>
+        <span>
+            <label>ReEnter Password:&emsp;</label>
+            <input name="password" id="password2" placeholder="Your password" type="password" required>
+        </span>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+				<span class="form-group">
+                    <p>Already have an account? <a href="login.html">Log In</a></p>
+                </span>
+    </div>
+<script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>

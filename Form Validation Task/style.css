@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  width: 100%;
+	background-color: rgb(241, 223, 253);
+        }
+
+        div {
+            width: 550px;
+            max-width: 80%;
+            margin: 100px auto 0;
+            border-radius: 12px;
+            padding: 30px;
+            background-color: rgb(194, 232, 241);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: table-cell;
+            width: 1px;
+            white-space: nowrap;
+            color:rgb(18, 76, 194);
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        input, select {
+            display: table-cell;
+            width: 100%;
+            font-size: 17px;
+            border: 1px solid rgb(18, 76, 194);
+            padding: 3px 8px;
+            box-sizing: border-box;
+            color:rgba(30, 30, 30);
+					border-radius: 5px;
+        }
+
+        span {
+            display: table;
+            width: 100%;
+        }
+
+        button {
+            margin: 0 auto;
+            display: block;
+            padding: 8px 15px;
+            background: rgb(32,98,226);
+            color: white;
+            width: 120px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+            border: 1px solid white;
+            background-color: rgb(18, 76, 194);
+        }
+
+        article {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        h5 {
+            margin: 0;
+        }
+
+        h3 {
+            color: #69ed67;
+            margin: 0;
+        }
+
+.form-group {
+	color:rgb(18, 76, 194);
+            font-size: 17px;
+}
+
+a {
+	color: navy;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(18, 76, 194);
+}
+
+.abtn {
+	color: white !important;
+	background-color: rgb(18, 76, 194) !important;
+	padding: 8px 16px !important;
+	border-radius: 10px !important;
+	margin: 20px !important;
+}
+
+abtn:hover {
+            cursor: pointer;
+            border: 1px solid white;
+            background-color: rgb(32, 98, 226);
+        }
